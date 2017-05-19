@@ -1,0 +1,39 @@
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.support.ui import Select
+from bs4 import BeautifulSoup
+import unittest, time, re,random,codecs
+from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
+
+dcap = dict(DesiredCapabilities.FIREFOX)
+dcap["phantomjs.page.settings.userAgent"] = (
+	"Mozilla/5.0 (Macintosh; Intel Mac OS X 10.9; rv:25.0) Gecko/20100101 Firefox/25.0 "
+)
+
+url = 'http://fabuxinxi.huangye88.com'
+
+cookie=[
+	{u"gr_user_id":u"38be0737-34fc-487f-bdfd-7f429f8552fe"},
+	{u"hy88loginid":u"1629897"},
+	{u"hy88realname":u"%E8%B5%B5%E7%9B%9B"},
+	{u"hy88usergroup":u"11"},
+	{u"hy88username":u"sonnen"},
+	{u"hy_itemproductnames":u"%E5%BE%B7%E5%9B%BD%E9%98%B3%E5%85%89%E8%93%84%E7%94%B5%E6%B1%A0%E5%AF%B9%E6%AF%94%2C%E5%BE%B7%E5%9B%BD%E9%98%B3%E5%85%8960%E8%93%84%E7%94%B5%E6%B1%A0%2C%E8%BF%9B%E5%8F%A3%E5%BE%B7%E5%9B%BD%E9%98%B3%E5%85%89%E8%93%84%E7%94%B5%E6%B1%A0"},
+	{u"hy_itemsubjects":u"%E5%8C%97%E4%BA%AC%E9%94%80%E5%94%AE%E9%98%B3%E5%85%89%E8%93%84%E7%94%B5%E6%B1%A0A512%2F2S%E4%BC%98%E8%B4%A8%E6%9C%8D%E5%8A%A1"}
+	]
+
+driver = webdriver.PhantomJS(desired_capabilities=dcap)
+
+driver.get('http://www.huangye88.com')
+driver.delete_all_cookies()
+
+driver.add_cookie(cookie)
+driver.get(url)
+
+codecs.open('filenam1.txt','wb','utf-8').write(driverp.page_source)
+cap_dict = driver.desired_capabilities
+for key in cap_dict:
+	print '%s: %s' % (key, cap_dict[key])
+print driver.current_url
+driver.quit

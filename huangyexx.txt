@@ -1,0 +1,29 @@
+# -*-coding:utf-8-*-
+
+import random
+from selenium import webdriver
+
+driver = webdriver.Ie()
+url='http://fabuxinxi.huangye88.com'
+
+titles=open(u'')
+
+
+driver.get(url)
+
+driver.find_element_by_xpath("//*[@id='mainV']").send_keys("UPS")
+driver.find_element_by_xpath('//*[@id="catslist"]/li[2]/a').click()
+
+driver.find_element_by_xpath("//*[@id='subject']").send_keys(unicode())#"标题"
+driver.find_element_by_xpath("//*[@id='content']").send_keys(unicode())
+driver.find_element_by_xpath("//*[@id='postform']/div[7]/div/input").send_keys()#关键词
+driver.find_element_by_xpath("//*[@id="addkey"]").click()
+driver.find_element_by_xpath("//*[@id='productname0']").send_keys()#商品别名
+driver.find_element_by_xpath("//*[@id='productname1']").send_keys()#商品别名
+driver.find_element_by_xpath("//*[@id='productname2']").send_keys()#商品别名
+driver.find_element_by_xpath("//*[@id='unitname']").send_keys()
+driver.find_element_by_xpath("//*[@id='postform']/div[12]/div[1]/div/div/div/ul/li[1]/span[24]")
+driver.find_element_by_xpath("//*[@id='unitTable']/tbody/tr[1]/td[1]/input").send_keys(1)#购买数量
+driver.find_element_by_xpath("//*[@id='unitTable']/tbody/tr[1]/td[2]/input").send_keys(1)#产品单价
+driver.find_element_by_xpath("//*[@id='4']").send_keys(1)#供货总量
+driver.find_element_by_xpath("//*[@id='postform']/p[1]/a").click()

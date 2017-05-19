@@ -1,0 +1,23 @@
+# -*-coding:utf-8-*-
+
+import sys
+from bs4 import BeautifulSoup
+from selenium import webdriver
+
+reload(sys)
+sys.setdefaultencoding('utf8') # 设置编码
+
+fo = open('table11.txt', 'w')
+#//*[@id="container"]/table
+driver = webdriver.Ie()
+
+for i in range(1,500):
+	print(i)
+	urlbase="http://hao.huangye88.com/pn"
+	url=urlbase+str(i)
+	driver.get(url)
+	page = driver.page_source
+	soup = BeautifulSoup(page,'html5lib')
+	tabb = soup.find("table", {"class" : "sod"})
+	fo.write(str(tabb)+'\n')
+fo.close()

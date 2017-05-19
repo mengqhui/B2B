@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://www.qinfawang.com/" />
+<title>qinfafa</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">qinfafa</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/member/fabu.php?mid=5&amp;action=add</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=title</td>
+	<td>塔城经销阳光电池A512/120A放心省心</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=key1</td>
+	<td>德国阳光电池旭祥</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=key2</td>
+	<td>内蒙德国阳光蓄电</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=key3</td>
+	<td>原装德国阳光蓄电</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>css=select</td>
+	<td>label=机械设备</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=option[value=&quot;1043&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>//span[@id='load_category_1']/select[2]</td>
+	<td>label=电子设备</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//form[@id='dform']/table/tbody/tr[7]/td[2]/table/tbody/tr[1]/td/img[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//img[@title='2017-03-28 15:28:37<br />800px * 1066px<br />']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=post[elite]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=submit</td>
+	<td></td>
+</tr>
+
+</tbody></table>
+</body>
+</html>
